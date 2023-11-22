@@ -1,0 +1,20 @@
+current directory: /Users/tg/Projects/trials/rails-trials/gems/debug-1.8.0/ext/debug
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-5t8myk sitelibdir\=./.gem.20231114-88461-5t8myk clean
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-5t8myk sitelibdir\=./.gem.20231114-88461-5t8myk
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-5t8myk sitelibdir\=./.gem.20231114-88461-5t8myk install
+/usr/bin/install -c -m 0755 debug.bundle ./.gem.20231114-88461-5t8myk/debug
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-5t8myk sitelibdir\=./.gem.20231114-88461-5t8myk clean

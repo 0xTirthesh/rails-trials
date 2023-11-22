@@ -1,0 +1,19 @@
+current directory: /Users/tg/Projects/trials/rails-trials/gems/bindex-0.8.1/ext/skiptrace
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-spbbh2 sitelibdir\=./.gem.20231114-88461-spbbh2 clean
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-spbbh2 sitelibdir\=./.gem.20231114-88461-spbbh2
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-spbbh2 sitelibdir\=./.gem.20231114-88461-spbbh2 install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20231114-88461-spbbh2/skiptrace/internal
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-spbbh2 sitelibdir\=./.gem.20231114-88461-spbbh2 clean

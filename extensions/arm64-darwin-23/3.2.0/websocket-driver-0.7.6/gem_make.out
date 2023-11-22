@@ -1,0 +1,19 @@
+current directory: /Users/tg/Projects/trials/rails-trials/gems/websocket-driver-0.7.6/ext/websocket-driver
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-s4cz2e sitelibdir\=./.gem.20231114-88461-s4cz2e clean
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-s4cz2e sitelibdir\=./.gem.20231114-88461-s4cz2e
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-s4cz2e sitelibdir\=./.gem.20231114-88461-s4cz2e install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20231114-88461-s4cz2e
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-s4cz2e sitelibdir\=./.gem.20231114-88461-s4cz2e clean

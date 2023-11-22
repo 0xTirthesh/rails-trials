@@ -1,0 +1,29 @@
+<% if current_user %>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <%= link_to "Go Getter!", root_path, class: "brand-logo" %>
+        <ul class="right hide-on-med-and-down">
+          <li><%= link_to "Logout", sessions_path, method: :delete, class: "" %></li>
+          <li class="hide">
+            <a class="dropdown-trigger" href="#!" data-target="dropdown1">
+              <i class="material-icons">more_vert</i> <%= current_user.display_name %>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+<% else %>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <%= link_to "Go Getter!", root_path, class: "brand-logo" %>
+        <ul class="right hide-on-med-and-down">
+          <li><%= link_to "About Us", about_us_path, class: "" %></li>
+          <li><%= link_to "Login", login_path, method: :get,  class: "" %></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+<% end %>

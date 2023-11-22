@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @page_title || 'Go Getter' %></title>
+  <meta name="description" content="<%= @page_description || 'Go Getter — Helping You Get Your Stuff Done!' %>">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+
+<body>
+
+<%= render partial: "shared/navbar" %>
+
+<%= render partial: "shared/flash_msgs_top" %>
+<div class="container">
+  <%= yield %>
+</div>
+<%= render partial: "shared/flash_msgs_btm" %>
+
+</body>
+</html>

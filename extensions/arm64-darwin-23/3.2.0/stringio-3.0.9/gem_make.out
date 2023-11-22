@@ -1,0 +1,19 @@
+current directory: /Users/tg/Projects/trials/rails-trials/gems/stringio-3.0.9/ext/stringio
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/stringio-3.0.9/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-sicbrn sitelibdir\=./.gem.20231114-88461-sicbrn clean
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/stringio-3.0.9/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-sicbrn sitelibdir\=./.gem.20231114-88461-sicbrn
+compiling stringio.c
+linking shared-object stringio.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/stringio-3.0.9/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-sicbrn sitelibdir\=./.gem.20231114-88461-sicbrn install
+/usr/bin/install -c -m 0755 stringio.bundle ./.gem.20231114-88461-sicbrn
+
+current directory: /Users/tg/Projects/trials/rails-trials/gems/stringio-3.0.9/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20231114-88461-sicbrn sitelibdir\=./.gem.20231114-88461-sicbrn clean
