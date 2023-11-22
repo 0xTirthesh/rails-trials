@@ -2,30 +2,34 @@
   Let's Get Your Stuff Done!
 </h1>
 
-<%= form_with model: @user, url: users_path do |form| %>
-  <% if @user.errors.any? %>
+<div class="row m30">
+  <div class="col s3"></div>
+  <%= form_with model: @user, url: users_path, class: "col s6" do |form| %>
+    <% if @user.errors.any? %>
+      <div>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <div>
-      <ul>
-        <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+      <%= form.text_field :email, placeholder: "Email" %>
     </div>
+
+    <div>
+      <%= form.password_field :password, placeholder: "Password" %>
+    </div>
+
+    <div>
+      <%= form.password_field :password_confirmation, placeholder: "Confirm Password" %>
+    </div>
+
+    <p>
+      <%= form.submit 'Sign Up', class: "btn waves-effect waves-light" %>
+    </p>
   <% end %>
-
-  <div>
-    <%= form.text_field :email, placeholder: "Email" %>
-  </div>
-
-  <div>
-    <%= form.password_field :password, placeholder: "Password" %>
-  </div>
-
-  <div>
-    <%= form.password_field :password_confirmation, placeholder: "Confirm Password" %>
-  </div>
-
-  <p>
-    <%= form.submit 'Sign Up' %>
-  </p>
-<% end %>
+  <div class="col s3"></div>
+</div>

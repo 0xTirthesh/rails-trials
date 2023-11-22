@@ -2,26 +2,35 @@
   Login
 </h1>
 
-<%= form_with model: @user, url: sessions_path do |form| %>
-  <% if @user.errors.any? %>
-    <div>
-      <ul>
-        <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="row">
+  <div class="col s3"></div>
+  <%= form_with model: @user, url: sessions_path, class: "col s6" do |form| %>
+    <% if @user.errors.any? %>
+      <div>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= form.text_field :email, placeholder: "Your Email ID", class: "validate" %>
+      </div>
     </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= form.password_field :password, placeholder: "Password", class: "validate" %>
+      </div>
+    </div>
+
+    <p>
+      <%= form.submit 'Login', class: "btn waves-effect waves-light" %>
+      <a class="waves-effect waves-teal btn-flat">Forgot Password?</a>
+    </p>
   <% end %>
-
-  <div>
-    <%= form.text_field :email, placeholder: "Email" %>
-  </div>
-
-  <div>
-    <%= form.password_field :password, placeholder: "Password" %>
-  </div>
-
-  <p>
-    <%= form.submit 'Login' %>
-  </p>
-<% end %>
+  <div class="col s3"></div>
+</div>

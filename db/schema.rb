@@ -16,12 +16,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_21_084451) do
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "email", limit: 64, null: false
-    t.string "display_name", limit: 256, null: false
+    t.string "display_name", limit: 256
     t.string "password_digest", limit: 64, null: false
-    t.jsonb "profile"
+    t.jsonb "profile_meta"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["display_name"], name: "index_users_on_display_name"
   end
 
 end

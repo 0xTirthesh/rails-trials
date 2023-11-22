@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+
   def create
     puts "adding new create user"
 
@@ -10,31 +11,27 @@ class UsersController < ApplicationController
     @user.password_confirmation = user_params[:password_confirmation]
 
     if @user.save
-      flash[:top_notice] = "User created successfully"
+      flash[:top_notice] = "User created successfully; now login"
       redirect_to login_path
     else
-
-      puts "-------------------------"
-      @user.errors.full_messages.each { |err|
-        puts "#{err}"
-      }
-      puts "-------------------------"
-
-      flash[:top_alert] = "User not created"
+      flash[:top_alert] = "User creation failed; please fix errors and retry"
       redirect_to root_path
     end
   end
 
   def dashboard
     @page_title = 'Dashboard | Go Getter'
+    @user = current_user
+
     puts "showing dashboard; user id: '#{@user.id}'"
 
-    if current_user.blank?
-      render plain: '401 Unauthorized', status: :unauthorized
-      return
+    unless logged_in?
+      flash[:top_alert] = "You need to login first to access the dashboard"
+      redirect_to login_path
     end
 
-    flash.now[:btm_notice] = "Welcome Back, #{@user.display_name}!"
+    display_name = @user.display_name.blank? ? @user.email : @user.display_name
+    flash.now[:btm_notice] = "Welcome Back, #{display_name}!"
   end
 
   private
