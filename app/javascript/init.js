@@ -22,3 +22,5 @@ $(document).on('turbo:before-visit turbo:before-cache', function() {
 function displayToast() {
     M.toast({html: 'I am a toast', completeCallback: function(){alert('Your toast was dismissed')}})
 }
+
+alert("The document is ready!");

@@ -1,0 +1,35 @@
+<h1 class="center-align">
+  Settings
+</h1>
+
+<div class="row">
+  <div class="col s3"></div>
+  <%= form_with model: @user, url: passwords_path, method: "patch", class: "col s6" do |form| %>
+    <% if @user.errors.any? %>
+      <div>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= form.password_field :password, placeholder: "Password", class: "validate" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= form.password_field :password_confirmation, placeholder: "Confirm Password", class: "validate" %>
+      </div>
+    </div>
+
+    <p>
+      <%= form.submit 'Update Password', class: "btn waves-effect waves-light" %>
+    </p>
+  <% end %>
+  <div class="col s3"></div>
+</div>

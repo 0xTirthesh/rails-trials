@@ -1,20 +1,21 @@
 class ApplicationController < ActionController::Base
-  helper_method :logged_in?, :current_user
+  before_action :set_current_user
+  helper_method :logged_in?, :authorized
 
-  def current_user
-    # If session[:user_id] is nil, set it to nil, otherwise find the user by id.
-    @current_user ||=
-      begin
-        return nil unless session[:user_id]
-        User.find(session[:user_id])
-      end
+  def set_current_user
+    if session[:user_id]
+      Current.user = User.find_by(id: session[:user_id])
+    end
   end
 
   def logged_in?
-    !!current_user
+    !!Current.user
   end
 
   def authorized
-    redirect_to login_path unless logged_in?
+    unless logged_in?
+      flash[:top_alert] = "You need to login first to access personal details."
+      redirect_to login_path
+    end
   end
 end
